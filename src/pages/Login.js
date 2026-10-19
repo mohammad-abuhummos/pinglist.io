@@ -28,7 +28,7 @@ export default function Login() {
   return (
     <div className="auth-page">
       <div className="auth-visual">
-        <img src="/images/about-workspace.png" alt="" />
+        <img src="/images/about-workspace.jpg" alt="A quiet cream workspace with a cobalt dashboard on the laptop" />
       </div>
       <div className="auth-panel">
         <form className="auth-card" onSubmit={onSubmit}>

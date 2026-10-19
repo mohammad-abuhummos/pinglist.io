@@ -30,7 +30,7 @@ export default function Register() {
   return (
     <div className="auth-page">
       <div className="auth-visual">
-        <img src="/images/crm-dashboard.png" alt="" />
+        <img src="/images/crm-dashboard.jpg" alt="Lead marketplace dashboard with live leads, buyers, and status" />
       </div>
       <div className="auth-panel">
         <form className="auth-card" onSubmit={onSubmit}>

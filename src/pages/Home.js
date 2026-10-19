@@ -226,6 +226,12 @@ export default function Home() {
             <p className="pull">More buyers. More competition. More revenue.</p>
           </div>
         </div>
+        <figure className="media-frame reveal">
+          <img
+            src="/images/marketplace-flow.jpg"
+            alt="One lead routed to several competing buyers"
+          />
+        </figure>
       </section>
 
       <section className="section" id="problem">
@@ -452,6 +458,12 @@ export default function Home() {
             <p className="lede">Control how much you spend without constantly monitoring the campaign.</p>
           </article>
         </div>
+        <figure className="media-frame reveal band-photo">
+          <img
+            src="/images/campaign-desk.jpg"
+            alt="Campaign regions highlighted on a map"
+          />
+        </figure>
       </section>
 
       <section className="section" id="wallet">
@@ -561,6 +573,12 @@ export default function Home() {
             </p>
           </div>
         </div>
+        <figure className="media-frame reveal">
+          <img
+            src="/images/crm-dashboard.jpg"
+            alt="Marketplace dashboard showing available leads, value, and live status"
+          />
+        </figure>
       </section>
 
       <section className="section" id="network">
@@ -649,6 +667,11 @@ export default function Home() {
         </div>
         <div className="contact-grid">
           <article className="panel reveal">
+            <img
+              className="contact-photo"
+              src="/images/about-workspace.jpg"
+              alt="A calm desk set up for reviewing lead campaigns"
+            />
             <h3>Sellers and buyers</h3>
             <p className="lede">
               Selling leads, buying leads, or connecting a CRM — send a note. We reply from the
