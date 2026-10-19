@@ -39,7 +39,12 @@ export default function PingList() {
 
   return (
     <div className="ping-board" ref={rootRef} aria-hidden="true">
-      <div className="ping-board-head">
+      <div className="ping-chrome">
+        <span className="ping-chrome-dots" aria-hidden="true">
+          <i />
+          <i />
+          <i />
+        </span>
         <strong>Live marketplace</strong>
         <span>1 lead</span>
       </div>
