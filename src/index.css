@@ -16,7 +16,10 @@ body,
 
 body {
   margin: 0;
-  background: var(--bg);
+  background:
+    radial-gradient(1100px 480px at 100% -8%, rgba(29, 111, 232, 0.14), transparent 52%),
+    radial-gradient(800px 420px at -8% 12%, rgba(56, 168, 214, 0.12), transparent 48%),
+    var(--bg);
   color: var(--text);
   font-family: var(--font-body);
   font-size: 16px;
@@ -26,18 +29,18 @@ body {
 }
 
 :root {
-  --bg: #0b0f14;
-  --bg-soft: #121820;
-  --surface: #182028;
-  --text: #f4f1ea;
-  --muted: #9aa4b0;
-  --accent: #ff5a36;
-  --accent-soft: rgba(255, 90, 54, 0.14);
-  --accent-line: rgba(255, 90, 54, 0.5);
-  --accent-2: #5ee0c4;
-  --danger: #ff6b86;
-  --line: rgba(244, 241, 234, 0.12);
-  --shadow: 0 28px 70px rgba(0, 0, 0, 0.42);
+  --bg: #f3f7fc;
+  --bg-soft: #e7f1fb;
+  --surface: #ffffff;
+  --text: #102844;
+  --muted: #5c7190;
+  --accent: #1a6fd4;
+  --accent-soft: rgba(26, 111, 212, 0.12);
+  --accent-line: rgba(26, 111, 212, 0.45);
+  --accent-2: #0c7ea8;
+  --danger: #c5364a;
+  --line: rgba(16, 40, 68, 0.12);
+  --shadow: 0 18px 48px rgba(24, 72, 130, 0.12);
   --radius: 18px;
   --font-display: 'Bricolage Grotesque', sans-serif;
   --font-body: 'Figtree', sans-serif;
@@ -47,7 +50,7 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: #111;
+  color: #fff;
 }
 
 a {

@@ -62,8 +62,8 @@ export default function PathGraphic() {
       <svg className="path-svg" viewBox="0 0 800 720">
         <defs>
           <linearGradient id="pathGlow" x1="0" y1="720" x2="800" y2="0">
-            <stop offset="0%" stopColor="#5ee0c4" />
-            <stop offset="55%" stopColor="#ff5a36" />
+            <stop offset="0%" stopColor="#7eb6f5" />
+            <stop offset="55%" stopColor="#1a6fd4" />
             <stop offset="100%" stopColor="#ffffff" />
           </linearGradient>
         </defs>
