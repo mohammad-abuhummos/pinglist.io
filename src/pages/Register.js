@@ -35,8 +35,8 @@ export default function Register() {
       <div className="auth-panel">
         <form className="auth-card" onSubmit={onSubmit}>
           <p className="eyebrow">Account</p>
-          <h1>Create your list.</h1>
-          <p>Register first. Then subscribe to pinglist.io — Ping and Post included — for 2,500 USD / month.</p>
+          <h1>Create your account.</h1>
+          <p>Register to buy or sell leads on the PingList.io marketplace.</p>
           <label className="field">
             <span>Name</span>
             <input

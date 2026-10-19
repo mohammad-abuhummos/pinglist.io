@@ -63,7 +63,7 @@ export default function PathGraphic() {
         <defs>
           <linearGradient id="pathGlow" x1="0" y1="720" x2="800" y2="0">
             <stop offset="0%" stopColor="#7eb6f5" />
-            <stop offset="55%" stopColor="#1a6fd4" />
+            <stop offset="55%" stopColor="#2a4bff" />
             <stop offset="100%" stopColor="#ffffff" />
           </linearGradient>
         </defs>

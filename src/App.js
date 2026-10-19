@@ -8,8 +8,6 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Account from './pages/Account';
-import Ping from './pages/Ping';
-import Post from './pages/Post';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 
@@ -32,8 +30,8 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/account" element={<Account />} />
-            <Route path="/ping" element={<Ping />} />
-            <Route path="/post" element={<Post />} />
+            <Route path="/ping" element={<Navigate to="/" replace />} />
+            <Route path="/post" element={<Navigate to="/" replace />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="*" element={<Navigate to="/" replace />} />

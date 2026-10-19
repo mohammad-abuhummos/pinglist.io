@@ -2,10 +2,10 @@ import { useLayoutEffect, useRef } from 'react';
 import { gsap } from '../gsapSetup';
 
 const ROWS = [
-  { name: 'Northwind', note: 'Proposal quiet for 6 days', tag: 'Due', hot: true },
-  { name: 'Lumen & Co', note: 'Handoff to onboarding', tag: 'Ping', hot: false },
-  { name: 'Harbor Labs', note: 'No post in 14 days', tag: 'Watch', hot: false },
-  { name: 'Atlas Freight', note: 'Call recap is on the record', tag: 'Clear', hot: false },
+  { name: 'Buyer A · Roofing', note: 'Florida · homeowners · ready now', tag: 'Best', hot: true },
+  { name: 'Buyer B · Solar', note: 'ZIP match · daily cap open', tag: 'Eligible', hot: false },
+  { name: 'Buyer C · HVAC', note: 'Outside schedule', tag: 'Skip', hot: false },
+  { name: 'Buyer D · Windows', note: 'Under the max price', tag: 'Eligible', hot: false },
 ];
 
 export default function PingList() {
@@ -40,8 +40,8 @@ export default function PingList() {
   return (
     <div className="ping-board" ref={rootRef} aria-hidden="true">
       <div className="ping-board-head">
-        <strong>Today’s ping list</strong>
-        <span>4 open</span>
+        <strong>Live marketplace</strong>
+        <span>1 lead</span>
       </div>
       <ul className="ping-rows">
         {ROWS.map((row) => (

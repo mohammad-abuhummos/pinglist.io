@@ -5,19 +5,19 @@ export default function Terms() {
   return (
     <LegalPage kicker="Legal" title="Terms and conditions" updated="19 October 2026">
       <p>
-        These terms govern your use of pinglist.io, including Ping and Post (together, the
-        “Service”). By creating an account or using the Service, you agree to this document.
+        These terms govern your use of PingList.io, a real-time lead marketplace (the “Service”).
+        By creating an account or using the Service, you agree to this document.
       </p>
 
       <h2>1. The Service</h2>
       <p>
-        pinglist.io is a paid workspace for pipeline, accounts, and team follow-through. Ping is
-        the alerting and mention layer. Post is the shared activity record on people, companies, and
-        deals. Custom studio work, if any, is scoped in a separate written agreement.
+        PingList.io connects lead sellers with qualified buyers. Sellers submit leads. Buyers set
+        campaigns and fund a prepaid wallet. The platform matches a lead to an eligible buyer and
+        records the transaction. Custom work, if any, is scoped in a separate written agreement.
       </p>
       <p>
-        The self-serve plan is billed at 2,500 USD per month to the logged-in user. Prices are
-        shown before you confirm payment. Taxes may be added where required by law.
+        Lead prices, wallet funding, and any platform fees are shown before you confirm payment.
+        Taxes may be added where required by law.
       </p>
 
       <h2>2. Accounts</h2>
@@ -47,13 +47,13 @@ export default function Terms() {
         <li>use the Service to break the law, or to store or send unlawful content;</li>
         <li>probe, overload, or interfere with the Service or other customers;</li>
         <li>share login credentials, scrape the product, or reverse engineer it except as allowed by law;</li>
-        <li>upload malware, or use Ping or Post to harass, spam, or impersonate others;</li>
+        <li>upload malware, or use the marketplace to harass, spam, or impersonate others;</li>
         <li>resell the Service without a written partner agreement.</li>
       </ul>
 
       <h2>5. Your data</h2>
       <p>
-        You retain rights in the customer records, Ping messages, and Posts you put in the
+        You retain rights in the lead records you put in the
         workspace. You grant pinglist.io a limited licence to host, process, and display that
         data solely to run the Service for you. Our Privacy Policy explains how we handle personal
         data.
@@ -61,16 +61,16 @@ export default function Terms() {
 
       <h2>6. Intellectual property</h2>
       <p>
-        The pinglist.io name, Ping, Post, the site, and related marks and software remain
+        The PingList.io name, the site, and related marks and software remain
         our property or that of our licensors. We grant you a non-exclusive, non-transferable right
         to use the Service during a paid (or otherwise authorised) term.
       </p>
 
       <h2>7. Availability</h2>
       <p>
-        We aim for a stable Service but do not warrant uninterrupted access. We may change features,
-        including Ping and Post, with reasonable notice when a change is material. Planned
-        maintenance will be announced when practical.
+        We aim for a stable Service but do not warrant uninterrupted access. We may change features
+        with reasonable notice when a change is material. Planned maintenance will be announced when
+        practical.
       </p>
 
       <h2>8. Liability</h2>
@@ -102,7 +102,7 @@ export default function Terms() {
       <h2>11. Contact</h2>
       <p>
         pinglist.io · hello@pinglist.io. Questions about these
-        terms, Ping, Post, or billing can use the contact form on the site or that email.
+        terms, leads, or billing can use the contact form on the site or that email.
       </p>
       <p>
         See also our <Link to="/privacy">Privacy policy</Link>.

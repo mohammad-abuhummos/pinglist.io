@@ -216,7 +216,7 @@
 }
 
 .hero h1 {
-  max-width: 12ch;
+  max-width: 16ch;
   font-size: clamp(2.2rem, 4.4vw, 4.4rem);
 }
 
@@ -528,8 +528,139 @@
 .section {
   max-width: calc(var(--max) + 56px);
   margin: 0 auto;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  scroll-margin-top: calc(var(--nav-h) + 12px);
+}
+
+.pull {
+  margin-top: 22px;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+
+.quote {
+  margin: 12px 0 0;
+  padding: 16px 18px;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 14px 14px 0;
+  background: var(--bg-soft);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+  line-height: 1.35;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card-grid.two {
+  grid-template-columns: 1fr 1fr;
+}
+
+.mini-card {
+  padding: 18px 20px;
+}
+
+.mini-card p {
+  color: var(--text);
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip-list li {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.flow {
+  margin: 0;
+  padding: 8px 28px;
+  list-style: none;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(24, 72, 130, 0.06);
+}
+
+.flow li {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.flow li:last-child {
+  border-bottom: 0;
+}
+
+.flow span {
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.flow strong {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: -0.04em;
+}
+
+.buyer-stack {
+  display: grid;
+  gap: 8px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.buyer-stack li {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--bg-soft);
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.close-band h2 {
+  max-width: 16ch;
+  margin-top: 8px;
+}
+
+.close-lines {
+  display: grid;
+  gap: 4px;
+  margin-top: 22px;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+.close-band .btn {
+  margin-top: 22px;
 }
 
 .section-head {
@@ -1102,6 +1233,8 @@
   .contact-grid,
   .modules-grid,
   .feature-grid,
+  .card-grid,
+  .card-grid.two,
   .auth-page,
   .billing-grid {
     grid-template-columns: 1fr;

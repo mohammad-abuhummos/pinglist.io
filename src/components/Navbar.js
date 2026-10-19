@@ -22,10 +22,10 @@ export default function Navbar() {
 
   return (
     <header className={`nav${scrolled ? ' is-scrolled' : ''}${open ? ' is-open' : ''}`}>
-      <Link to="/" className="logo" aria-label="pinglist.io">
+      <Link to="/" className="logo" aria-label="PingList.io">
         <LogoMark />
         <span className="logo-word">
-          pinglist<span className="logo-tld">.io</span>
+          PingList<span className="logo-tld">.io</span>
         </span>
       </Link>
       <button
@@ -35,13 +35,16 @@ export default function Navbar() {
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
       >
-        {open ? 'Close' : 'Menu'}
+        <span className="menu-bars" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+        </span>
       </button>
       <nav className="nav-links">
-        <a href="/#products">Products</a>
-        <NavLink to="/ping">Ping</NavLink>
-        <NavLink to="/post">Post</NavLink>
-        <a href="/#pricing">Pricing</a>
+        <a href="/#sellers">Sellers</a>
+        <a href="/#buyers">Buyers</a>
+        <a href="/#marketplace">Marketplace</a>
         <a href="/#contact">Contact</a>
       </nav>
       <div className="nav-cta">
@@ -55,9 +58,9 @@ export default function Navbar() {
         ) : (
           <>
             <NavLink to="/login">Log in</NavLink>
-            <Link className="btn btn-solid" to="/register">
-              Get pinglist
-            </Link>
+            <a className="btn btn-solid" href="/#contact">
+              Get started
+            </a>
           </>
         )}
       </div>

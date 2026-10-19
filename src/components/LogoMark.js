@@ -1,7 +1,7 @@
 export default function LogoMark() {
   return (
     <svg className="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
-      <rect width="32" height="32" rx="9" fill="#1a6fd4" />
+      <rect width="32" height="32" rx="10" fill="#141820" />
       <path d="M8 11.2h8.2" stroke="#ffffff" strokeWidth="2.1" strokeLinecap="round" />
       <path d="M8 16h14.5" stroke="#ffffff" strokeWidth="2.1" strokeLinecap="round" />
       <path d="M8 20.8h11" stroke="#ffffff" strokeWidth="2.1" strokeLinecap="round" />

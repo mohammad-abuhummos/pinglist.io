@@ -5,14 +5,14 @@ export default function Privacy() {
   return (
     <LegalPage kicker="Legal" title="Privacy policy" updated="19 October 2026">
       <p>
-        This policy describes how pinglist.io (“we”, “us”) handles personal data on the site
-        and in the workspace, including Ping and Post.
+        This policy describes how PingList.io (“we”, “us”) handles personal data on the site and
+        in the lead marketplace.
       </p>
 
       <h2>1. Who we are</h2>
       <p>
-        pinglist.io is the controller for account and site data. For CRM records you load about
-        your own customers, you are typically the controller and we process that data on your
+        PingList.io is the controller for account and site data. For lead records you submit about
+        your own prospects, you are typically the controller and we process that data on your
         instructions to provide the Service. Contact: hello@pinglist.io.
       </p>
 
@@ -28,8 +28,8 @@ export default function Privacy() {
           servers.
         </li>
         <li>
-          <strong>Workspace data.</strong> Contacts, companies, deals, tasks, Ping messages, Posts,
-          and files you or your teammates enter.
+          <strong>Lead data.</strong> Contacts, campaign settings, qualification answers, and files
+          you or your teammates enter.
         </li>
         <li>
           <strong>Site data.</strong> Messages sent through the contact form, and technical logs
@@ -45,7 +45,7 @@ export default function Privacy() {
       <p>We process personal data to:</p>
       <ul>
         <li>create and secure your account;</li>
-        <li>deliver CRM, Ping, and Post;</li>
+        <li>run the lead marketplace and deliver matched leads;</li>
         <li>take payment, issue invoices, and show billing in your login;</li>
         <li>reply to support and contact-form messages;</li>
         <li>keep the Service safe, debug faults, and meet legal duties.</li>
@@ -64,11 +64,11 @@ export default function Privacy() {
         the Service and our users.
       </p>
 
-      <h2>5. Ping and Post</h2>
+      <h2>5. Lead records</h2>
       <p>
-        Ping content (alerts, mentions, nudges) and Posts (notes and timeline updates) are stored in
-        your workspace so authorised users can see them. You are responsible for what your team
-        writes there and for having a lawful basis to store personal data about your customers.
+        Lead records, campaign settings, and transaction history are stored so authorised users on
+        your account can see them. You are responsible for the personal data your team submits and
+        for having a lawful basis to store it.
       </p>
 
       <h2>6. Retention</h2>

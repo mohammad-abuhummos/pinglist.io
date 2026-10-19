@@ -8,7 +8,7 @@ export default function LegalPage({ kicker, title, updated, children }) {
       <p className="legal-updated">Last updated {updated}</p>
       <div className="legal-body">{children}</div>
       <p className="legal-back">
-        <Link to="/">Back to pinglist.io</Link>
+        <Link to="/">Back to PingList.io</Link>
       </p>
     </main>
   );

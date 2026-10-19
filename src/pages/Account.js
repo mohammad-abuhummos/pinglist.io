@@ -150,8 +150,8 @@ export default function Account() {
         <aside className="panel">
           <h3>Plan</h3>
           <p className="lede" style={{ marginTop: 10 }}>
-            pinglist.io includes Ping and Post. One workspace, billed monthly to the logged-in
-            user.
+            PingList.io is a real-time lead marketplace. Buyers fund a prepaid wallet and purchase
+            the leads that match their campaign.
           </p>
         </aside>
       </div>

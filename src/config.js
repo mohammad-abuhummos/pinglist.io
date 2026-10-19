@@ -5,5 +5,5 @@ export const config = {
   paddleClientToken: process.env.REACT_APP_PADDLE_CLIENT_TOKEN || '',
   paddlePriceId: process.env.REACT_APP_PADDLE_PRICE_ID || '',
   crmPriceUsd: 2500,
-  crmPlanName: 'pinglist.io',
+  crmPlanName: 'PingList.io',
 };

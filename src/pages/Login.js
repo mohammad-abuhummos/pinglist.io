@@ -33,8 +33,8 @@ export default function Login() {
       <div className="auth-panel">
         <form className="auth-card" onSubmit={onSubmit}>
           <p className="eyebrow">Account</p>
-          <h1>Log in to billing.</h1>
-          <p>Use the same login to subscribe to pinglist.io and review invoices.</p>
+          <h1>Log in.</h1>
+          <p>Use your PingList.io account to manage campaigns, leads, and billing.</p>
           <label className="field">
             <span>Email</span>
             <input
