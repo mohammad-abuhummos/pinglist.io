@@ -10,6 +10,7 @@ import Register from './pages/Register';
 import Account from './pages/Account';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
+import HomeImprovement from './pages/HomeImprovement';
 
 function App() {
   return (
@@ -30,8 +31,9 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/account" element={<Account />} />
-            <Route path="/ping" element={<Navigate to="/" replace />} />
-            <Route path="/post" element={<Navigate to="/" replace />} />
+            <Route path="/home-improvement" element={<HomeImprovement />} />
+            <Route path="/ping" element={<Navigate to="/home-improvement#ping" replace />} />
+            <Route path="/post" element={<Navigate to="/home-improvement#post" replace />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="*" element={<Navigate to="/" replace />} />

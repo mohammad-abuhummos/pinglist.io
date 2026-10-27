@@ -4,99 +4,101 @@ import { gsap } from '../gsapSetup';
 import PingList from '../components/PingList';
 
 const MARQUEE = [
-  'Roofing',
-  'Solar',
-  'HVAC',
-  'Windows',
-  'Plumbing',
-  'Debt settlement',
-  'Call centers',
+  'Real estate',
+  'Insurance',
+  'Professional services',
+  'Healthcare',
+  'Education',
+  'Automotive',
+  'Retail',
   'Agencies',
 ];
 
 const FLOW = [
-  'Lead generated',
+  'Lead comes in',
   'PingList.io',
-  'Find eligible buyers',
-  'Compare buyer demand',
-  'Select best opportunity',
-  'Deliver lead',
-  'Get paid',
+  'Assign an owner',
+  'Qualify it',
+  'Follow up',
+  'Update the stage',
+  'Close or nurture',
 ];
 
-const SELLER_POINTS = [
+const TEAM_POINTS = [
   {
-    title: 'Increase revenue per lead',
-    copy: 'Give your traffic access to multiple buyers instead of relying on a single buyer.',
+    title: 'One record for every lead',
+    copy: 'A form, a call, a referral, and a walk-in all land on the same list.',
   },
   {
-    title: 'Reduce unsold leads',
-    copy: 'If one buyer is unavailable, PingList.io can look for another qualified buyer.',
+    title: 'The same workflow everywhere',
+    copy: 'Real estate, services, clinics, and sales teams use one pipeline. The fields are yours.',
   },
   {
-    title: 'Create buyer competition',
-    copy: 'Multiple eligible buyers can compete for the same opportunity.',
+    title: 'A clear owner',
+    copy: 'Every lead belongs to someone on your team, so it does not sit in a shared inbox.',
   },
   {
-    title: 'Scale without manual routing',
-    copy: 'Automate lead distribution instead of managing buyer routing manually.',
+    title: 'Follow-up you can see',
+    copy: 'The next step stays on the record, instead of in someone’s memory.',
   },
 ];
 
 const PROBLEMS = [
-  'Sent to buyers who are not available',
-  'Rejected because of targeting issues',
-  'Lost when a buyer reaches their daily limit',
-  'Sold for less than their potential value',
-  'Sent to the wrong buyer',
-  'Left unused when demand changes',
-  'Difficult to track or dispute',
+  'Sitting in a shared inbox',
+  'Never followed up',
+  'Assigned to the wrong person',
+  'Copied across spreadsheets',
+  'Missing the context your team needs',
+  'Stuck with no next step',
+  'Hard to see what is still open',
 ];
 
-const BUYER_FILTERS = [
+const FIELDS = [
+  'Source',
   'Location',
-  'Service',
-  'Project type',
-  'Homeowner status',
-  'Lead quality',
-  'Qualification answers',
+  'Interest',
+  'Stage',
+  'Owner',
+  'Priority',
   'Budget',
-  'Schedule',
-  'Campaign requirements',
+  'Timeline',
+  'Notes',
 ];
 
-const HOME_SERVICES = [
-  'Roofing',
-  'Solar',
-  'HVAC',
-  'Windows',
-  'Plumbing',
-  'Gutters',
-  'Painting',
-  'Bath',
-  'Kitchen',
-  'Flooring',
-  'Siding',
-  'Home improvement',
+const INDUSTRIES = [
+  'Real estate',
+  'Insurance',
+  'Professional services',
+  'Healthcare',
+  'Education',
+  'Automotive',
+  'Retail',
+  'Hospitality',
+  'Agencies',
+  'Local services',
+  'B2B sales',
+  'Clinics',
 ];
+
+const STAGES = ['New', 'Contacted', 'Qualified', 'Working', 'Won'];
 
 const AUDIENCES = [
-  { title: 'Lead generators', copy: 'Monetize more of your traffic.' },
-  { title: 'Lead aggregators', copy: 'Manage multiple buyers and maximize lead value.' },
-  { title: 'Contractors', copy: 'Purchase qualified leads in your service areas.' },
-  { title: 'Call centers', copy: 'Control lead volume and campaign budgets.' },
-  { title: 'Marketing agencies', copy: 'Manage lead buying across multiple clients.' },
-  { title: 'CRM and lead platforms', copy: 'Connect supply and demand through one marketplace.' },
-  { title: 'Enterprise lead networks', copy: 'Manage thousands of campaigns, buyers, and sellers from one platform.' },
+  { title: 'Real estate teams', copy: 'Keep every inquiry with an agent and a next step.' },
+  { title: 'Service businesses', copy: 'Track requests from the first call to the finished job.' },
+  { title: 'Agencies', copy: 'Run client work from one shared pipeline.' },
+  { title: 'Sales teams', copy: 'See who owns each conversation and where it stands.' },
+  { title: 'Clinics and practices', copy: 'Follow new inquiries without losing them in email.' },
+  { title: 'Local businesses', copy: 'Replace the spreadsheet with a list the whole team can use.' },
+  { title: 'Multi-location companies', copy: 'One pipeline across offices, teams, and industries.' },
 ];
 
 const WHY = [
-  { title: 'More revenue', copy: 'Give every lead more opportunities to be sold.' },
-  { title: 'More buyers', copy: 'Connect your supply with multiple qualified buyers.' },
-  { title: 'More control', copy: 'Control targeting, pricing, volume, and budgets.' },
-  { title: 'Less waste', copy: 'Reduce leads that are lost because a buyer is unavailable.' },
-  { title: 'Better transparency', copy: 'Track every lead from generation to delivery.' },
-  { title: 'Faster growth', copy: 'Scale your lead operation without scaling manual work.' },
+  { title: 'Any industry', copy: 'The CRM does not assume what a lead means in your business.' },
+  { title: 'One pipeline', copy: 'New, contacted, qualified, working, won — or the stages you choose.' },
+  { title: 'Clear ownership', copy: 'Each lead has a person responsible for the next step.' },
+  { title: 'Nothing lost', copy: 'If someone is away, the lead is still on the team’s list.' },
+  { title: 'A full history', copy: 'Notes and stage changes stay on the record.' },
+  { title: 'Room to grow', copy: 'Start with one team and add offices without a new system.' },
 ];
 
 export default function Home() {
@@ -167,31 +169,32 @@ export default function Home() {
         <div className="hero-inner">
           <div className="hero-copy-block">
             <p className="eyebrow">PingList.io</p>
-            <h1 className="display">Turn every lead into more revenue.</h1>
+            <h1 className="display">One CRM for every kind of lead.</h1>
             <p className="hero-copy">
-              PingList.io is a real-time lead marketplace built to connect lead sellers with the
-              right buyers at the right price.
+              PingList.io helps any business capture leads, assign them, and follow through. A
+              property inquiry, a service request, and a sales conversation all live in the same
+              pipeline.
             </p>
             <div className="hero-actions">
               <a className="btn btn-solid" href="#contact">
                 Talk to us
               </a>
-              <a className="btn btn-ghost" href="#marketplace">
-                See the marketplace
+              <a className="btn btn-ghost" href="#workflow">
+                See the pipeline
               </a>
             </div>
             <div className="hero-meta">
               <div>
-                <strong>More buyers</strong>
-                <span>Qualified demand on every lead</span>
+                <strong>Any business</strong>
+                <span>Not tied to one industry</span>
               </div>
               <div>
-                <strong>More competition</strong>
-                <span>Eligible buyers bid for the same lead</span>
+                <strong>One pipeline</strong>
+                <span>The same stages for every lead</span>
               </div>
               <div>
-                <strong>More revenue</strong>
-                <span>Sell each lead for more</span>
+                <strong>Clear follow-up</strong>
+                <span>An owner and a next step</span>
               </div>
             </div>
           </div>
@@ -211,25 +214,25 @@ export default function Home() {
 
       <section className="section" id="intro">
         <div className="section-head reveal">
-          <p className="kicker">The marketplace</p>
+          <p className="kicker">The CRM</p>
           <div>
-            <h2>Monetize more traffic. Increase lead value. Reduce waste.</h2>
+            <h2>Built for the way your business actually works.</h2>
             <p className="lede" style={{ marginTop: 16 }}>
-              Whether you are generating thousands of leads, buying leads for a sales operation, or
-              running an agency or call center, PingList.io helps you monetize more traffic,
-              increase lead value, reduce waste, and scale your lead business.
+              A lead is not the same in every industry. In real estate it is an inquiry. In a
+              service business it is a request. In sales it is a conversation. PingList.io keeps that
+              work inside your own team.
             </p>
             <p className="lede" style={{ marginTop: 16 }}>
-              Instead of sending every lead to the same buyer, PingList.io creates a competitive
-              marketplace where qualified buyers compete for available leads.
+              Your team keeps the relationship. The CRM gives each lead a record, an owner, and a
+              stage, so the next step is visible to everyone who needs it.
             </p>
-            <p className="pull">More buyers. More competition. More revenue.</p>
+            <p className="pull">Capture it. Own it. Follow through.</p>
           </div>
         </div>
         <figure className="media-frame reveal">
           <img
             src="/images/marketplace-flow.jpg"
-            alt="One lead routed to several competing buyers"
+            alt="Leads moving through one shared pipeline"
           />
         </figure>
       </section>
@@ -238,11 +241,11 @@ export default function Home() {
         <div className="section-head reveal">
           <p className="kicker">The problem</p>
           <div>
-            <h2>Too many leads never reach their value.</h2>
+            <h2>Leads get lost when they have no home.</h2>
             <p className="lede" style={{ marginTop: 16 }}>
-              Every day, businesses spend thousands of dollars generating leads. Traditional lead
-              routing does not solve what happens next. If one buyer cannot take the lead, the
-              opportunity can disappear.
+              Teams bring people in through the website, the phone, and referrals, then leave the
+              next step in inboxes, chats, and spreadsheets. The lead is still yours. It is just
+              hard to find.
             </p>
           </div>
         </div>
@@ -253,50 +256,47 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <p className="pull reveal">PingList.io changes the way leads are bought and sold.</p>
+        <p className="pull reveal">PingList.io keeps every lead in one place.</p>
       </section>
 
       <section className="section" id="advantage">
         <div className="section-head reveal">
           <p className="kicker">The PingList.io advantage</p>
-          <h2>Sell every lead for its maximum potential.</h2>
+          <h2>The same pipeline, whatever you sell.</h2>
         </div>
         <div className="modules-grid">
           <article className="panel reveal">
             <p className="lede">
-              PingList.io gives your leads access to a marketplace of qualified buyers. When a lead
-              enters the platform, PingList.io evaluates available buyers and identifies the buyers
-              that are eligible and ready to purchase.
+              When a lead comes in, PingList.io gives it a record, an owner, and a stage. Your team
+              sees what it is, who is working it, and what should happen next. Nothing is sold off
+              to another company.
             </p>
-            <p className="pull">Your lead goes where it has the highest commercial value.</p>
+            <p className="pull">The lead stays with your business.</p>
           </article>
           <article className="panel reveal">
             <p className="kicker">Instead of asking</p>
-            <blockquote className="quote">Which buyer should receive this lead?</blockquote>
+            <blockquote className="quote">Which inbox is this sitting in?</blockquote>
             <p className="kicker" style={{ marginTop: 22 }}>
               PingList.io asks
             </p>
-            <blockquote className="quote">
-              Which qualified buyer will pay the most for this lead right now?
-            </blockquote>
+            <blockquote className="quote">Who owns this lead, and what is the next step?</blockquote>
           </article>
         </div>
       </section>
 
-      <section className="section" id="sellers">
+      <section className="section" id="pipeline">
         <div className="section-head reveal">
-          <p className="kicker">Built for lead sellers</p>
+          <p className="kicker">For any team</p>
           <div>
-            <h2>Turn traffic into a revenue machine.</h2>
+            <h2>Work the lead. Do not resell it.</h2>
             <p className="lede" style={{ marginTop: 16 }}>
-              If you generate leads through Google, Meta, native advertising, organic traffic,
-              affiliate networks, call centers, websites, landing pages, lead forms, or aggregators,
-              PingList.io helps you monetize that traffic more efficiently.
+              Forms, calls, ads, referrals, and walk-ins can land in the same list. Each one is handed
+              to someone on your team.
             </p>
           </div>
         </div>
         <div className="card-grid two">
-          {SELLER_POINTS.map((item) => (
+          {TEAM_POINTS.map((item) => (
             <article className="panel reveal" key={item.title}>
               <h3>{item.title}</h3>
               <p className="lede">{item.copy}</p>
@@ -305,19 +305,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" id="buyers">
+      <section className="section" id="follow-up">
         <div className="section-head reveal">
-          <p className="kicker">Built for lead buyers</p>
+          <p className="kicker">Your fields</p>
           <div>
-            <h2>Get more of the leads you actually want.</h2>
+            <h2>Track what matters to your business.</h2>
             <p className="lede" style={{ marginTop: 16 }}>
-              PingList.io helps contractors, agencies, call centers, and sales organizations control
-              exactly what they purchase. You control where, when, and how much you buy.
+              A real estate team can note the neighborhood. A clinic can note the appointment. A
+              sales team can note the product. The pipeline stays the same.
             </p>
           </div>
         </div>
         <ul className="chip-list reveal">
-          {BUYER_FILTERS.map((item) => (
+          {FIELDS.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
@@ -325,71 +325,66 @@ export default function Home() {
 
       <section className="section" id="fit">
         <div className="section-head reveal">
-          <p className="kicker">Campaign fit</p>
-          <h2>Stop buying leads that do not fit.</h2>
+          <p className="kicker">How a record looks</p>
+          <h2>Shape the pipeline around the work.</h2>
         </div>
         <div className="modules-grid">
           <article className="panel reveal">
             <span className="product-tag">Example</span>
-            <h3>Roofing campaign</h3>
+            <h3>Real estate inquiry</h3>
             <ul className="feature-list">
-              <li><span className="dot" /> Florida</li>
-              <li><span className="dot" /> Selected ZIP codes</li>
-              <li><span className="dot" /> Homeowners only</li>
-              <li><span className="dot" /> Specific project types</li>
-              <li><span className="dot" /> A maximum lead price</li>
-              <li><span className="dot" /> 50 leads per day</li>
+              <li><span className="dot" /> Website form</li>
+              <li><span className="dot" /> City or neighborhood</li>
+              <li><span className="dot" /> What they asked about</li>
+              <li><span className="dot" /> Assigned to one agent</li>
+              <li><span className="dot" /> Stage: new</li>
+              <li><span className="dot" /> Follow up today</li>
             </ul>
           </article>
           <article className="panel reveal">
-            <h3>You buy what fits your business.</h3>
+            <h3>The same idea in any industry.</h3>
             <p className="lede">
-              Your campaign can be configured around your exact business requirements. PingList.io
-              automatically looks for leads that match those requirements.
+              Swap the neighborhood for a service area, a course, or a product line. The relationship
+              stays in one record your team can open.
             </p>
-            <p className="pull">You do not have to buy everything.</p>
+            <p className="pull">The fields change. The workflow does not.</p>
           </article>
         </div>
       </section>
 
       <section className="section" id="industries">
         <div className="section-head reveal">
-          <p className="kicker">Verticals</p>
-          <h2>One platform. Multiple industries.</h2>
+          <p className="kicker">Industries</p>
+          <h2>One platform. Any industry.</h2>
         </div>
         <div className="modules-grid">
           <article className="panel reveal">
-            <h3>Home services</h3>
+            <h3>Use it wherever leads come in</h3>
             <ul className="chip-list">
-              {HOME_SERVICES.map((item) => (
+              {INDUSTRIES.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </article>
           <article className="panel reveal">
-            <h3>Financial services</h3>
-            <ul className="feature-list">
-              <li><span className="dot" /> Debt settlement</li>
-              <li><span className="dot" /> Financial services</li>
-              <li><span className="dot" /> Other qualified financial lead programs</li>
-            </ul>
+            <h3>A lead is just someone to follow up with</h3>
             <p className="lede" style={{ marginTop: 18 }}>
-              New verticals can be added as your business grows. PingList.io is designed for
-              high-volume lead businesses across multiple verticals.
+              It might be a property inquiry, a new patient, a project request, or a product demo.
+              PingList.io treats each of those as a lead your team can own and follow up.
             </p>
+            <p className="pull">Your industry. Your words. One list.</p>
           </article>
         </div>
       </section>
 
-      <section className="section" id="marketplace">
+      <section className="section" id="workflow">
         <div className="section-head reveal">
-          <p className="kicker">Real-time lead marketplace</p>
+          <p className="kicker">The pipeline</p>
           <div>
-            <h2>Supply meets demand instantly.</h2>
+            <h2>From first contact to a clear next step.</h2>
             <p className="lede" style={{ marginTop: 16 }}>
-              PingList.io creates a marketplace where lead supply and buyer demand meet in real
-              time. This happens automatically, so your business can handle large volumes without
-              manually deciding where every lead should go.
+              PingList.io is the shared list your team works from. New leads come in, someone owns
+              them, and the stage shows where things stand.
             </p>
           </div>
         </div>
@@ -403,89 +398,84 @@ export default function Home() {
         </ol>
       </section>
 
-      <section className="section" id="competition">
+      <section className="section" id="stages">
         <div className="section-head reveal">
-          <p className="kicker">Demand</p>
-          <h2>More buyers means more opportunity.</h2>
+          <p className="kicker">Stages</p>
+          <h2>Every lead has a place in the pipeline.</h2>
         </div>
         <div className="modules-grid">
           <article className="panel reveal">
             <p className="lede">
-              For lead sellers, the value of PingList.io comes from having access to multiple
-              potential buyers. Instead of depending on one buyer, Buyer A through Buyer E can all
-              represent potential demand for the same lead.
+              Start with a simple set of stages, or rename them to match how your team already
+              talks. A lead moves forward because someone on your team moved it.
             </p>
             <ul className="buyer-stack">
-              {['Buyer A', 'Buyer B', 'Buyer C', 'Buyer D', 'Buyer E'].map((buyer) => (
-                <li key={buyer}>{buyer}</li>
+              {STAGES.map((stage) => (
+                <li key={stage}>{stage}</li>
               ))}
             </ul>
           </article>
           <article className="panel reveal">
             <p className="lede">
-              If Buyer A is unavailable, another qualified buyer may still be able to purchase the
-              lead.
+              If one person is away, the lead is still visible. It stays on the list until someone on
+              the team updates it.
             </p>
-            <p className="pull">Lost leads become lost revenue.</p>
-            <p className="pull">More opportunities become more sales.</p>
+            <p className="pull">A quiet lead is still a lead.</p>
+            <p className="pull">A next step keeps it moving.</p>
           </article>
         </div>
       </section>
 
       <section className="section" id="control">
         <div className="section-head reveal">
-          <p className="kicker">Buyer control</p>
-          <h2>Complete control over every campaign.</h2>
+          <p className="kicker">Your team</p>
+          <h2>Organize the work the way you already run it.</h2>
         </div>
         <div className="card-grid two">
           <article className="panel reveal">
-            <h3>Geography</h3>
-            <p className="lede">Target states, counties, cities, ZIP codes, or a ZIP radius.</p>
+            <h3>Ownership</h3>
+            <p className="lede">Assign each lead to a person. Reassign it when the team changes.</p>
           </article>
           <article className="panel reveal">
-            <h3>Volume</h3>
-            <p className="lede">Set daily lead limits, monthly limits, and spending limits.</p>
+            <h3>Stages</h3>
+            <p className="lede">Use the stages that match your business, from first contact to won.</p>
           </article>
           <article className="panel reveal">
-            <h3>Schedule</h3>
-            <p className="lede">
-              Run campaigns only when your sales team is available. For example, Monday through
-              Friday, 8:00 AM to 5:00 PM.
-            </p>
+            <h3>Follow-up</h3>
+            <p className="lede">See what is waiting, what is overdue, and what has gone quiet.</p>
           </article>
           <article className="panel reveal">
-            <h3>Budget</h3>
-            <p className="lede">Control how much you spend without constantly monitoring the campaign.</p>
+            <h3>Visibility</h3>
+            <p className="lede">Managers see the whole pipeline. Teammates see the work they own.</p>
           </article>
         </div>
         <figure className="media-frame reveal band-photo">
           <img
             src="/images/campaign-desk.jpg"
-            alt="Campaign regions highlighted on a map"
+            alt="A desk set up for reviewing an open pipeline"
           />
         </figure>
       </section>
 
-      <section className="section" id="wallet">
+      <section className="section" id="workspace">
         <div className="section-head reveal">
-          <p className="kicker">Prepaid wallet</p>
-          <h2>Spend with confidence.</h2>
+          <p className="kicker">One workspace</p>
+          <h2>The whole team works from the same records.</h2>
         </div>
         <div className="modules-grid">
           <article className="panel reveal">
             <p className="lede">
-              PingList.io’s prepaid wallet gives buyers control over their lead spending. Buyers
-              fund their account and use their available balance to purchase leads. When the balance
-              or campaign budget reaches its limit, lead delivery can automatically stop.
+              Notes, stage, and the next step stay on the lead. The story does not live in one
+              person’s inbox, and a new teammate can pick up the record without a long handover.
             </p>
           </article>
           <article className="panel reveal">
             <ul className="feature-list">
-              <li><span className="dot" /> No unexpected invoices</li>
-              <li><span className="dot" /> Better spending control</li>
-              <li><span className="dot" /> Predictable lead budgets</li>
-              <li><span className="dot" /> Automatic campaign protection</li>
-              <li><span className="dot" /> Clear transaction history</li>
+              <li><span className="dot" /> A shared pipeline</li>
+              <li><span className="dot" /> Notes on the record</li>
+              <li><span className="dot" /> Handoffs the team can see</li>
+              <li><span className="dot" /> A history of what happened</li>
+              <li><span className="dot" /> Room for more than one location</li>
             </ul>
           </article>
         </div>
@@ -493,42 +483,41 @@ export default function Home() {
 
       <section className="section" id="tracking">
         <div className="section-head reveal">
-          <p className="kicker">Transparency</p>
-          <h2>Know where your money is going.</h2>
+          <p className="kicker">Visibility</p>
+          <h2>See the work, not a pile of messages.</h2>
         </div>
         <div className="modules-grid">
           <article className="panel reveal">
-            <h3>Buyers can see</h3>
+            <h3>On every lead</h3>
             <ul className="feature-list">
-              <li><span className="dot" /> Leads purchased and lead price</li>
-              <li><span className="dot" /> Campaign and source</li>
-              <li><span className="dot" /> Acceptance, rejection, and returns</li>
-              <li><span className="dot" /> Total spend</li>
+              <li><span className="dot" /> Where it came from</li>
+              <li><span className="dot" /> Who owns it</li>
+              <li><span className="dot" /> The current stage</li>
+              <li><span className="dot" /> The last activity</li>
             </ul>
           </article>
           <article className="panel reveal">
-            <h3>Sellers can see</h3>
+            <h3>Across the pipeline</h3>
             <ul className="feature-list">
-              <li><span className="dot" /> Leads generated and leads sold</li>
-              <li><span className="dot" /> Buyer and revenue</li>
-              <li><span className="dot" /> Acceptance and returns</li>
-              <li><span className="dot" /> Performance by source</li>
+              <li><span className="dot" /> What is new</li>
+              <li><span className="dot" /> What is waiting on a follow-up</li>
+              <li><span className="dot" /> What was won or set aside</li>
+              <li><span className="dot" /> Which sources bring people in</li>
             </ul>
           </article>
         </div>
-        <p className="pull reveal">No guessing. No spreadsheets. No black box.</p>
+        <p className="pull reveal">No guessing. No spreadsheets. No lost threads.</p>
       </section>
 
       <section className="section" id="quality">
         <div className="section-head reveal">
-          <p className="kicker">Lead quality</p>
+          <p className="kicker">Clean records</p>
           <div>
-            <h2>Qualified leads, not just lead volume.</h2>
+            <h2>A shorter list is more useful than a noisy one.</h2>
             <p className="lede" style={{ marginTop: 16 }}>
-              More leads do not always mean more revenue. PingList.io helps businesses focus on
-              qualified leads. The platform can help identify duplicate leads, invalid information,
-              out-of-area leads, suppressed contacts, unqualified opportunities, and buyer-specific
-              qualification requirements. This protects both sides of the marketplace.
+              More names do not mean more customers. PingList.io helps you notice duplicate
+              contacts, missing details, leads with no owner, and follow-ups that went quiet —
+              before the relationship goes cold.
             </p>
           </div>
         </div>
@@ -536,25 +525,25 @@ export default function Home() {
 
       <section className="section" id="connect">
         <div className="section-head reveal">
-          <p className="kicker">CRM connectivity</p>
+          <p className="kicker">Where leads come from</p>
           <div>
-            <h2>Leads land in the systems you already use.</h2>
+            <h2>Bring them in from the tools you already use.</h2>
             <p className="lede" style={{ marginTop: 16 }}>
-              Already using a CRM? PingList.io can connect your lead operation with your existing
-              systems, so leads move from the marketplace into the tools your sales team already
-              uses.
+              Website forms, phone, email, ads, and referrals can feed the same pipeline. If you
+              already have another system, PingList.io can sit beside it while your team works the
+              follow-up in one place.
             </p>
           </div>
         </div>
         <ul className="chip-list reveal">
           {[
-            'LeadPerfection',
-            'LeadsPedia',
-            'Custom CRMs',
-            'REST APIs',
+            'Website forms',
+            'Phone and email',
+            'Referrals',
+            'Ads',
             'Webhooks',
-            'JSON and XML systems',
-            'Internal sales platforms',
+            'Spreadsheets',
+            'Your current CRM',
           ].map((item) => (
             <li key={item}>{item}</li>
           ))}
@@ -565,40 +554,40 @@ export default function Home() {
         <div className="section-head reveal">
           <p className="kicker">Scale</p>
           <div>
-            <h2>Built for high-volume lead businesses.</h2>
+            <h2>From one office to many teams.</h2>
             <p className="lede" style={{ marginTop: 16 }}>
-              Whether you are selling 100 leads per month or 100,000+, PingList.io is designed to
-              help you scale. Manage multiple sellers, buyers, campaigns, industries, traffic
-              sources, and pricing models from one centralized platform.
+              A solo agent and a company with several locations can use the same idea: one pipeline,
+              clear owners, and a record of every lead. Add teammates, offices, and industries
+              without starting over.
             </p>
           </div>
         </div>
         <figure className="media-frame reveal">
           <img
             src="/images/crm-dashboard.jpg"
-            alt="Marketplace dashboard showing available leads, value, and live status"
+            alt="CRM dashboard showing leads, stages, and owners"
           />
         </figure>
       </section>
 
       <section className="section" id="network">
         <div className="section-head reveal">
-          <p className="kicker">The network</p>
+          <p className="kicker">In practice</p>
           <div>
-            <h2>Turn your lead network into a marketplace.</h2>
+            <h2>Turn scattered inquiries into a pipeline.</h2>
             <p className="lede" style={{ marginTop: 16 }}>
-              The biggest opportunity is not simply generating more leads. It is creating a better
-              marketplace around the leads you already generate.
+              The useful change is not a new way to trade leads. It is a shared place for the
+              people who already reached out.
             </p>
           </div>
         </div>
         <ol className="flow reveal">
           {[
-            'Publishers generate demand',
-            'PingList.io finds the opportunity',
-            'Buyers compete for qualified leads',
-            'Leads are delivered automatically',
-            'Everyone gets measurable results',
+            'Someone reaches out',
+            'PingList.io creates the record',
+            'A teammate owns the follow-up',
+            'The stage stays current',
+            'The business keeps the relationship',
           ].map((step, index) => (
             <li key={step}>
               <span>0{index + 1}</span>
@@ -626,7 +615,7 @@ export default function Home() {
       <section className="section" id="why">
         <div className="section-head reveal">
           <p className="kicker">Why PingList.io</p>
-          <h2>More from every lead you already pay for.</h2>
+          <h2>One way to work every lead you already have.</h2>
         </div>
         <div className="card-grid">
           {WHY.map((item) => (
@@ -640,20 +629,19 @@ export default function Home() {
 
       <section className="section" id="close">
         <div className="panel close-band reveal">
-          <p className="eyebrow">Your leads are worth more</p>
-          <h2>Are you getting the maximum value from every lead?</h2>
+          <p className="eyebrow">For any business</p>
+          <h2>Your leads should not depend on one inbox.</h2>
           <p className="lede" style={{ marginTop: 16 }}>
-            You already spend money generating leads. PingList.io helps turn your lead operation
-            into a competitive, automated marketplace where buyers and sellers can transact in real
-            time.
+            People are already reaching out. PingList.io gives every one of them a place on your
+            team’s pipeline, whether you sell homes, services, or something else entirely.
           </p>
           <div className="close-lines">
-            <span>Generate more.</span>
-            <span>Sell smarter.</span>
-            <span>Waste less.</span>
-            <span>Grow faster.</span>
+            <span>Capture them.</span>
+            <span>Assign them.</span>
+            <span>Follow through.</span>
+            <span>Keep the record.</span>
           </div>
-          <p className="pull">PingList.io. The marketplace where leads meet buyers.</p>
+          <p className="pull">PingList.io. A CRM for every kind of lead.</p>
           <a className="btn btn-solid" href="#contact">
             Talk to us
           </a>
@@ -663,19 +651,19 @@ export default function Home() {
       <section className="section" id="contact">
         <div className="section-head reveal">
           <p className="kicker">Contact</p>
-          <h2>Tell us about your lead operation.</h2>
+          <h2>Tell us about your business.</h2>
         </div>
         <div className="contact-grid">
           <article className="panel reveal">
             <img
               className="contact-photo"
               src="/images/about-workspace.jpg"
-              alt="A calm desk set up for reviewing lead campaigns"
+              alt="A calm desk set up for reviewing an open pipeline"
             />
-            <h3>Sellers and buyers</h3>
+            <h3>Any industry</h3>
             <p className="lede">
-              Selling leads, buying leads, or connecting a CRM — send a note. We reply from the
-              team that runs PingList.io.
+              Tell us how leads come in today and where they get stuck. We reply from the team that
+              runs PingList.io.
             </p>
           </article>
           <form className="panel" onSubmit={onContact}>

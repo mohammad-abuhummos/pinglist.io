@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: min(1120px, calc(100% - 32px));
+  width: min(1280px, calc(100% - 32px));
   min-height: 64px;
   padding: 8px 8px 8px 18px;
   border: 1px solid rgba(255, 255, 255, 0.7);
@@ -1291,6 +1291,211 @@
   margin-top: 12px;
 }
 
+.page-hero {
+  padding: calc(var(--nav-h) + 36px) 28px 8px;
+}
+
+.page-hero-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 36px;
+  align-items: center;
+  width: 100%;
+  max-width: calc(var(--max) + 56px);
+  margin: 0 auto;
+}
+
+.page-hero h1 {
+  max-width: 14ch;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4.4vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.98;
+}
+
+.catalog-nav {
+  margin-bottom: 8px;
+}
+
+.catalog-nav a {
+  color: inherit;
+}
+
+.lead-rail {
+  position: relative;
+}
+
+.lead-token-lane {
+  position: absolute;
+  z-index: 2;
+  top: 11px;
+  right: 0;
+  left: 0;
+  height: 14px;
+  pointer-events: none;
+}
+
+.lead-token {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 6px rgba(42, 75, 255, 0.16);
+  will-change: transform;
+}
+
+.lead-stages {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lead-stage {
+  position: relative;
+  padding: 42px 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.86);
+  text-align: center;
+}
+
+.lead-stage::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  border-radius: 50%;
+  background: #d9d6cf;
+}
+
+.lead-stage.is-on {
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+}
+
+.lead-stage.is-on::before {
+  background: var(--accent);
+}
+
+.lead-stage strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: -0.03em;
+}
+
+.lead-stage span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.lead-count {
+  display: block;
+  margin-top: 8px;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  letter-spacing: -0.04em;
+}
+
+@media (max-width: 700px) {
+  .lead-stage {
+    padding: 36px 4px 12px;
+  }
+
+  .lead-stage strong {
+    font-size: 0.72rem;
+  }
+
+  .lead-stage span {
+    display: none;
+  }
+
+  .lead-count {
+    font-size: 1rem;
+  }
+}
+
+.catalog-block {
+  margin-top: 36px;
+  scroll-margin-top: calc(var(--nav-h) + 16px);
+}
+
+.catalog-block h3 {
+  margin-bottom: 8px;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+  letter-spacing: -0.04em;
+}
+
+.title-draw {
+  display: block;
+  width: min(100%, 420px);
+  height: 8px;
+  margin-bottom: 14px;
+  overflow: visible;
+}
+
+.title-draw path {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.spec-list {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.spec-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(190px, 280px) 1fr;
+  gap: 18px;
+  padding: 16px 22px;
+  border-top: 1px solid var(--line);
+}
+
+.row-draw {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  background: var(--accent);
+  transform-origin: top center;
+}
+
+.spec-row:first-child {
+  border-top: 0;
+}
+
+.spec-row dt {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.spec-row dd {
+  margin: 0;
+  color: var(--muted);
+}
+
 .auth-page {
   min-height: 100vh;
   display: grid;
@@ -1439,6 +1644,7 @@
 
 @media (max-width: 980px) {
   .hero-inner,
+  .page-hero-inner,
   .section-head,
   .about-grid,
   .product-grid,
@@ -1449,6 +1655,7 @@
   .feature-grid,
   .card-grid,
   .card-grid.two,
+  .spec-row,
   .auth-page,
   .billing-grid {
     grid-template-columns: 1fr;

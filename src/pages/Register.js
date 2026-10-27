@@ -30,13 +30,13 @@ export default function Register() {
   return (
     <div className="auth-page">
       <div className="auth-visual">
-        <img src="/images/crm-dashboard.jpg" alt="Lead marketplace dashboard with live leads, buyers, and status" />
+        <img src="/images/crm-dashboard.jpg" alt="CRM dashboard with leads, stages, and owners" />
       </div>
       <div className="auth-panel">
         <form className="auth-card" onSubmit={onSubmit}>
           <p className="eyebrow">Account</p>
           <h1>Create your account.</h1>
-          <p>Register to buy or sell leads on the PingList.io marketplace.</p>
+          <p>Create an account to keep your team’s leads in one pipeline.</p>
           <label className="field">
             <span>Name</span>
             <input

@@ -42,9 +42,10 @@ export default function Navbar() {
         </span>
       </button>
       <nav className="nav-links">
-        <a href="/#sellers">Sellers</a>
-        <a href="/#buyers">Buyers</a>
-        <a href="/#marketplace">Marketplace</a>
+        <a href="/#pipeline">Pipeline</a>
+        <NavLink to="/home-improvement">Home improvement</NavLink>
+        <a href="/#industries">Industries</a>
+        <a href="/#workflow">How it works</a>
         <a href="/#contact">Contact</a>
       </nav>
       <div className="nav-cta">

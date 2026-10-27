@@ -3,10 +3,10 @@ import LegalPage from '../components/LegalPage';
 
 export default function Privacy() {
   return (
-    <LegalPage kicker="Legal" title="Privacy policy" updated="19 October 2026">
+    <LegalPage kicker="Legal" title="Privacy policy" updated="27 October 2026">
       <p>
         This policy describes how PingList.io (“we”, “us”) handles personal data on the site and
-        in the lead marketplace.
+        in the CRM.
       </p>
 
       <h2>1. Who we are</h2>
@@ -28,8 +28,8 @@ export default function Privacy() {
           servers.
         </li>
         <li>
-          <strong>Lead data.</strong> Contacts, campaign settings, qualification answers, and files
-          you or your teammates enter.
+          <strong>Lead data.</strong> Contacts, notes, stages, and files you or your teammates
+          enter.
         </li>
         <li>
           <strong>Site data.</strong> Messages sent through the contact form, and technical logs
@@ -45,7 +45,7 @@ export default function Privacy() {
       <p>We process personal data to:</p>
       <ul>
         <li>create and secure your account;</li>
-        <li>run the lead marketplace and deliver matched leads;</li>
+        <li>run your workspace and store the leads your team enters;</li>
         <li>take payment, issue invoices, and show billing in your login;</li>
         <li>reply to support and contact-form messages;</li>
         <li>keep the Service safe, debug faults, and meet legal duties.</li>
@@ -66,9 +66,9 @@ export default function Privacy() {
 
       <h2>5. Lead records</h2>
       <p>
-        Lead records, campaign settings, and transaction history are stored so authorised users on
-        your account can see them. You are responsible for the personal data your team submits and
-        for having a lawful basis to store it.
+        Lead records and notes are stored so authorised users on your account can see them. You are
+        responsible for the personal data your team submits and for having a lawful basis to store
+        it.
       </p>
 
       <h2>6. Retention</h2>

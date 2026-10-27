@@ -150,8 +150,8 @@ export default function Account() {
         <aside className="panel">
           <h3>Plan</h3>
           <p className="lede" style={{ marginTop: 10 }}>
-            PingList.io is a real-time lead marketplace. Buyers fund a prepaid wallet and purchase
-            the leads that match their campaign.
+            PingList.io is a CRM for any business. Your team keeps leads, owners, and follow-ups
+            in one pipeline.
           </p>
         </aside>
       </div>

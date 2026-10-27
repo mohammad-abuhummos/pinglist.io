@@ -12,8 +12,9 @@ export default function Footer() {
           </span>
         </Link>
         <nav className="footer-links">
-          <a href="/#sellers">Sellers</a>
-          <a href="/#buyers">Buyers</a>
+          <a href="/#pipeline">Pipeline</a>
+          <Link to="/home-improvement">Home improvement</Link>
+          <a href="/#industries">Industries</a>
           <Link to="/terms">Terms</Link>
           <Link to="/privacy">Privacy</Link>
         </nav>

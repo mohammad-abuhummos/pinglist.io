@@ -34,7 +34,7 @@ export default function Login() {
         <form className="auth-card" onSubmit={onSubmit}>
           <p className="eyebrow">Account</p>
           <h1>Log in.</h1>
-          <p>Use your PingList.io account to manage campaigns, leads, and billing.</p>
+          <p>Use your PingList.io account to manage leads, follow-ups, and billing.</p>
           <label className="field">
             <span>Email</span>
             <input

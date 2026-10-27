@@ -3,21 +3,21 @@ import LegalPage from '../components/LegalPage';
 
 export default function Terms() {
   return (
-    <LegalPage kicker="Legal" title="Terms and conditions" updated="19 October 2026">
+    <LegalPage kicker="Legal" title="Terms and conditions" updated="27 October 2026">
       <p>
-        These terms govern your use of PingList.io, a real-time lead marketplace (the “Service”).
-        By creating an account or using the Service, you agree to this document.
+        These terms govern your use of PingList.io, a CRM for managing your team’s leads (the
+        “Service”). By creating an account or using the Service, you agree to this document.
       </p>
 
       <h2>1. The Service</h2>
       <p>
-        PingList.io connects lead sellers with qualified buyers. Sellers submit leads. Buyers set
-        campaigns and fund a prepaid wallet. The platform matches a lead to an eligible buyer and
-        records the transaction. Custom work, if any, is scoped in a separate written agreement.
+        PingList.io gives your team a workspace to store leads, assign an owner, and track
+        follow-up. You decide what a lead means in your business. Custom work, if any, is scoped in
+        a separate written agreement.
       </p>
       <p>
-        Lead prices, wallet funding, and any platform fees are shown before you confirm payment.
-        Taxes may be added where required by law.
+        The subscription price is shown before you confirm payment. Taxes may be added where
+        required by law.
       </p>
 
       <h2>2. Accounts</h2>
@@ -47,7 +47,7 @@ export default function Terms() {
         <li>use the Service to break the law, or to store or send unlawful content;</li>
         <li>probe, overload, or interfere with the Service or other customers;</li>
         <li>share login credentials, scrape the product, or reverse engineer it except as allowed by law;</li>
-        <li>upload malware, or use the marketplace to harass, spam, or impersonate others;</li>
+        <li>upload malware, or use the Service to harass, spam, or impersonate others;</li>
         <li>resell the Service without a written partner agreement.</li>
       </ul>
 
@@ -102,7 +102,7 @@ export default function Terms() {
       <h2>11. Contact</h2>
       <p>
         pinglist.io · hello@pinglist.io. Questions about these
-        terms, leads, or billing can use the contact form on the site or that email.
+        terms or billing can use the contact form on the site or that email.
       </p>
       <p>
         See also our <Link to="/privacy">Privacy policy</Link>.

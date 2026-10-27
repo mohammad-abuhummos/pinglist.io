@@ -2,13 +2,13 @@ import { useLayoutEffect, useRef } from 'react';
 import { gsap } from '../gsapSetup';
 
 const ROWS = [
-  { name: 'Buyer A · Roofing', note: 'Florida · homeowners · ready now', tag: 'Best', hot: true },
-  { name: 'Buyer B · Solar', note: 'ZIP match · daily cap open', tag: 'Eligible', hot: false },
-  { name: 'Buyer C · HVAC', note: 'Outside schedule', tag: 'Skip', hot: false },
-  { name: 'Buyer D · Windows', note: 'Under the max price', tag: 'Eligible', hot: false },
+  { name: 'New inquiry', note: 'Real estate · downtown', tag: 'New', hot: true },
+  { name: 'Policy question', note: 'Insurance · called back', tag: 'Contacted', hot: false },
+  { name: 'Appointment request', note: 'Clinic · this week', tag: 'Qualified', hot: false },
+  { name: 'Project brief', note: 'Agency · follow up tomorrow', tag: 'Working', hot: false },
 ];
 
-export default function PingList() {
+export default function PingList({ title = 'Pipeline', meta = '4 leads', rows = ROWS }) {
   const rootRef = useRef(null);
 
   useLayoutEffect(() => {
@@ -45,11 +45,11 @@ export default function PingList() {
           <i />
           <i />
         </span>
-        <strong>Live marketplace</strong>
-        <span>1 lead</span>
+        <strong>{title}</strong>
+        <span>{meta}</span>
       </div>
       <ul className="ping-rows">
-        {ROWS.map((row) => (
+        {rows.map((row) => (
           <li key={row.name} className={`ping-row${row.hot ? ' is-hot' : ''}`}>
             <span className="ping-dot">
               {row.hot ? <span className="ping-pulse" /> : null}
