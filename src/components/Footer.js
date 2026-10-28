@@ -13,7 +13,7 @@ export default function Footer() {
         </Link>
         <nav className="footer-links">
           <a href="/#pipeline">Pipeline</a>
-          <Link to="/home-improvement">Home improvement</Link>
+          <Link to="/home-improvement">PingPost CRM</Link>
           <a href="/#industries">Industries</a>
           <Link to="/terms">Terms</Link>
           <Link to="/privacy">Privacy</Link>

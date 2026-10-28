@@ -43,7 +43,7 @@ export default function Navbar() {
       </button>
       <nav className="nav-links">
         <a href="/#pipeline">Pipeline</a>
-        <NavLink to="/home-improvement">Home improvement</NavLink>
+        <NavLink to="/home-improvement">PingPost CRM</NavLink>
         <a href="/#industries">Industries</a>
         <a href="/#workflow">How it works</a>
         <a href="/#contact">Contact</a>

@@ -1,15 +1,8 @@
 import { useEffect, useLayoutEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import PingList from '../components/PingList';
+import { DeliveryDraw, LeadNetworkDraw, PingPostDraw, PipeDraw, RuleBoards, WalletDraw } from '../components/HomeImprovementDraws';
 import { gsap, ScrollTrigger } from '../gsapSetup';
 import CATALOG from './homeImprovementCatalog';
-
-const PING_ROWS = [
-  { name: 'Roofing · Tampa', note: 'Homeowner · ready now', tag: 'Accepted', hot: true },
-  { name: 'Solar · Orlando', note: 'ZIP match · cap open', tag: 'Ping', hot: false },
-  { name: 'HVAC · Miami', note: 'Outside schedule', tag: 'Skip', hot: false },
-  { name: 'Windows · Jacksonville', note: 'Under the max price', tag: 'Eligible', hot: false },
-];
 
 const SERVICES = [
   'Roofing',
@@ -38,15 +31,6 @@ const POST_POINTS = [
   { title: 'One destination', copy: 'The lead is posted once, to the response that fit, instead of blasted to every buyer.' },
   { title: 'Delivery you can track', copy: 'Acceptance, rejection, and returns stay on the record.' },
   { title: 'Into their system', copy: 'Post into a CRM, a webhook, or an API the buyer already uses.' },
-];
-
-const FLOW = [
-  'Lead comes in',
-  'Ping eligible buyers',
-  'Compare price and fit',
-  'Choose the best response',
-  'Post the full lead',
-  'Buyer receives it',
 ];
 
 const LEAD_STAGES = [
@@ -206,7 +190,7 @@ export default function HomeImprovement() {
             </div>
           </div>
           <div className="hero-visual">
-            <PingList title="Live ping" meta="1 lead" rows={PING_ROWS} />
+            <LeadNetworkDraw />
           </div>
         </div>
       </section>
@@ -282,14 +266,7 @@ export default function HomeImprovement() {
             </p>
           </div>
         </div>
-        <ol className="flow">
-          {FLOW.map((step, index) => (
-            <li key={step}>
-              <span>0{index + 1}</span>
-              <strong>{step}</strong>
-            </li>
-          ))}
-        </ol>
+        <PipeDraw />
       </section>
 
       <section className="section" id="example">
@@ -297,32 +274,7 @@ export default function HomeImprovement() {
           <p className="kicker">Example</p>
           <h2>A roofing lead in Florida.</h2>
         </div>
-        <div className="modules-grid">
-          <article className="panel">
-            <span className="product-tag">Ping</span>
-            <h3>What buyers see first</h3>
-            <ul className="feature-list">
-              <li><span className="dot" /> Roofing</li>
-              <li><span className="dot" /> Florida, selected ZIP codes</li>
-              <li><span className="dot" /> Homeowner</li>
-              <li><span className="dot" /> Replacement, not a repair</li>
-              <li><span className="dot" /> Available this afternoon</li>
-              <li><span className="dot" /> Under the buyer’s max price</li>
-            </ul>
-          </article>
-          <article className="panel">
-            <span className="product-tag">Post</span>
-            <h3>What the chosen buyer receives</h3>
-            <ul className="feature-list">
-              <li><span className="dot" /> Name and phone</li>
-              <li><span className="dot" /> Property address</li>
-              <li><span className="dot" /> Project notes</li>
-              <li><span className="dot" /> Qualification answers</li>
-              <li><span className="dot" /> Source of the lead</li>
-              <li><span className="dot" /> Delivery into their CRM</li>
-            </ul>
-          </article>
-        </div>
+        <PingPostDraw />
       </section>
 
       <section className="section" id="who">
@@ -381,6 +333,35 @@ export default function HomeImprovement() {
             ))}
           </ol>
         </div>
+        <WalletDraw />
+      </section>
+
+      <section className="section" id="delivery">
+        <div className="section-head">
+          <p className="kicker">Delivery</p>
+          <div>
+            <h2>Post the lead into the tools they already use.</h2>
+            <p className="lede" style={{ marginTop: 16 }}>
+              The buyer who fit receives the full lead in their system. Booking status can sync
+              back onto the record.
+            </p>
+          </div>
+        </div>
+        <DeliveryDraw />
+      </section>
+
+      <section className="section" id="rules">
+        <div className="section-head">
+          <p className="kicker">Rules</p>
+          <div>
+            <h2>Routing, checks, and the numbers on a lead.</h2>
+            <p className="lede" style={{ marginTop: 16 }}>
+              A home improvement lead can follow a buyer order, get screened, and show the margin
+              before anyone is paid.
+            </p>
+          </div>
+        </div>
+        <RuleBoards />
       </section>
 
       <section className="section" id="features">
