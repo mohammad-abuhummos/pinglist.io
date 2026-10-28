@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { api } from '../api/client';
 import { gsap } from '../gsapSetup';
-import PingList from '../components/PingList';
+import { CrmConnectDraw, CrmNetworkDraw, CrmPipeDraw, CrmRouting } from '../components/CrmDraws';
 
 const MARQUEE = [
   'Real estate',
@@ -12,16 +12,6 @@ const MARQUEE = [
   'Automotive',
   'Retail',
   'Agencies',
-];
-
-const FLOW = [
-  'Lead comes in',
-  'PingList.io',
-  'Assign an owner',
-  'Qualify it',
-  'Follow up',
-  'Update the stage',
-  'Close or nurture',
 ];
 
 const TEAM_POINTS = [
@@ -199,7 +189,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-visual">
-            <PingList />
+            <CrmNetworkDraw />
           </div>
         </div>
       </section>
@@ -388,14 +378,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <ol className="flow reveal">
-          {FLOW.map((step, index) => (
-            <li key={step}>
-              <span>0{index + 1}</span>
-              <strong>{step}</strong>
-            </li>
-          ))}
-        </ol>
+        <CrmPipeDraw />
       </section>
 
       <section className="section" id="stages">
@@ -449,6 +432,7 @@ export default function Home() {
             <p className="lede">Managers see the whole pipeline. Teammates see the work they own.</p>
           </article>
         </div>
+        <CrmRouting />
         <figure className="media-frame reveal band-photo">
           <img
             src="/images/campaign-desk.jpg"
@@ -548,6 +532,7 @@ export default function Home() {
             <li key={item}>{item}</li>
           ))}
         </ul>
+        <CrmConnectDraw />
       </section>
 
       <section className="section" id="scale">

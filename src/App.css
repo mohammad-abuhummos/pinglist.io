@@ -2392,3 +2392,58 @@
     justify-self: end;
   }
 }
+
+.crm-routing {
+  margin-top: 20px;
+}
+
+.crm-node-label {
+  fill: var(--text);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.hi-draw-node .is-owner {
+  stroke: #1f8a5b;
+}
+
+.crm-node-label .is-owner {
+  fill: #1f8a5b;
+}
+
+.hi-step-node {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.crm-hours {
+  display: flex;
+  gap: 2px;
+  margin-top: 16px;
+}
+
+.crm-hours i {
+  flex: 1;
+  height: 18px;
+  border-radius: 3px;
+  background: var(--bg-soft);
+}
+
+.crm-hours i.is-on {
+  background: var(--accent);
+}
+
+.crm-hours-label {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+#connect .hi-draw {
+  margin-top: 28px;
+}
