@@ -541,6 +541,22 @@
   margin-top: 28px;
 }
 
+.crm-shots {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.crm-shots .media-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  object-fit: contain;
+  background: #eef1f6;
+}
+
 .media-caption {
   padding: 18px 22px 22px;
   color: var(--muted);

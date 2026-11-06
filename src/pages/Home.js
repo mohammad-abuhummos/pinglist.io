@@ -258,6 +258,36 @@ export default function Home() {
         </figure>
       </section>
 
+      <section className="section" id="product">
+        <div className="section-head reveal">
+          <p className="kicker">Inside PingList</p>
+          <h2>The list your team opens every day.</h2>
+        </div>
+        <div className="crm-shots">
+          <figure className="media-frame reveal">
+            <img
+              src="/images/crm/image.png"
+              alt="Leads Bank with revenue, profit, cost, and a filter for sold leads"
+            />
+            <figcaption className="media-caption">Leads Bank. Search, filter, and open any lead.</figcaption>
+          </figure>
+          <figure className="media-frame reveal">
+            <img
+              src="/images/crm/dashboard.png"
+              alt="Today view with sold, unsold, amount, and duplicate totals"
+            />
+            <figcaption className="media-caption">Today. Sold, unsold, and what is still open.</figcaption>
+          </figure>
+          <figure className="media-frame reveal">
+            <img
+              src="/images/crm/login-page.png"
+              alt="PingList sign-in, with campaigns, delivery, and reports on one screen"
+            />
+            <figcaption className="media-caption">Sign in to the same workspace.</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section className="section" id="problem">
         <div className="section-head reveal">
           <p className="kicker">The problem</p>
