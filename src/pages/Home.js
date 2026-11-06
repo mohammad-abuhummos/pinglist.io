@@ -251,12 +251,6 @@ export default function Home() {
             <p className="pull">Capture it. Own it. Follow through.</p>
           </div>
         </div>
-        <figure className="media-frame reveal">
-          <img
-            src="/images/marketplace-flow.jpg"
-            alt="Leads moving through one shared pipeline"
-          />
-        </figure>
       </section>
 
       <section className="section" id="product">
@@ -264,28 +258,12 @@ export default function Home() {
           <p className="kicker">Inside PingList</p>
           <h2>The list your team opens every day.</h2>
         </div>
-        <div className="crm-shots">
-          <figure className="media-frame reveal">
-            <img
-              src="/images/crm/image.png"
-              alt="Leads Bank with revenue, profit, cost, and a filter for sold leads"
-            />
-            <figcaption className="media-caption">Leads Bank. Search, filter, and open any lead.</figcaption>
-          </figure>
-          <figure className="media-frame reveal dash-frame">
-            <CrmDashboard />
-            <figcaption className="media-caption">
-              Today. Pick a total, the ring, or yesterday to see the hours fill in.
-            </figcaption>
-          </figure>
-          <figure className="media-frame reveal">
-            <img
-              src="/images/crm/login-page.png"
-              alt="PingList sign-in, with campaigns, delivery, and reports on one screen"
-            />
-            <figcaption className="media-caption">Sign in to the same workspace.</figcaption>
-          </figure>
-        </div>
+        <figure className="media-frame reveal dash-frame">
+          <CrmDashboard />
+          <figcaption className="media-caption">
+            Today. Pick a total, the ring, or yesterday to see the hours fill in.
+          </figcaption>
+        </figure>
       </section>
 
       <section className="section" id="problem">
@@ -494,12 +472,6 @@ export default function Home() {
           </article>
         </div>
         <CrmRouting />
-        <figure className="media-frame reveal band-photo">
-          <img
-            src="/images/campaign-desk.jpg"
-            alt="A desk set up for reviewing an open pipeline"
-          />
-        </figure>
       </section>
 
       <section className="section" id="workspace">
@@ -608,12 +580,6 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <figure className="media-frame crm-shot reveal">
-          <img
-            src="/images/crm/dashboard.png"
-            alt="PingList today view with sold, unsold, amount, and duplicate totals"
-          />
-        </figure>
       </section>
 
       <section className="section" id="network">
@@ -716,11 +682,6 @@ export default function Home() {
         </div>
         <div className="contact-grid">
           <article className="panel reveal">
-            <img
-              className="contact-photo"
-              src="/images/about-workspace.jpg"
-              alt="A calm desk set up for reviewing an open pipeline"
-            />
             <h3>Any industry</h3>
             <p className="lede">
               Tell us how leads come in today and where they get stuck. We reply from the team that

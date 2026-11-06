@@ -403,6 +403,48 @@ export default function HomeImprovement() {
         ))}
       </section>
 
+      <section className="section" id="workspace">
+        <div className="section-head">
+          <p className="kicker">The workspace</p>
+          <h2>The screens buyers and sellers open.</h2>
+        </div>
+        <div className="crm-shots">
+          <figure className="media-frame crm-shot">
+            <img
+              src="/images/crm/dashboard.png"
+              alt="PingList today view with sold, unsold, amount, and duplicate totals"
+            />
+            <figcaption className="media-caption">Today. Sold, unsold, and what is still open.</figcaption>
+          </figure>
+          <figure className="media-frame crm-shot">
+            <img
+              src="/images/crm/image.png"
+              alt="Leads Bank with revenue, profit, cost, and a filter for sold leads"
+            />
+            <figcaption className="media-caption">Leads Bank. Search, filter, and open any lead.</figcaption>
+          </figure>
+          <figure className="media-frame crm-shot">
+            <img
+              src="/images/crm/login-page.png"
+              alt="PingList sign-in, with campaigns, delivery, and reports on one screen"
+            />
+            <figcaption className="media-caption">Sign in to the same workspace.</figcaption>
+          </figure>
+          <figure className="media-frame">
+            <img src="/images/marketplace-flow.jpg" alt="Leads moving through one shared pipeline" />
+          </figure>
+          <figure className="media-frame">
+            <img src="/images/campaign-desk.jpg" alt="A desk set up for reviewing an open pipeline" />
+          </figure>
+          <figure className="media-frame">
+            <img
+              src="/images/about-workspace.jpg"
+              alt="A calm desk set up for reviewing an open pipeline"
+            />
+          </figure>
+        </div>
+      </section>
+
       <section className="section" id="close">
         <div className="panel close-band">
           <p className="eyebrow">Home improvement only</p>
