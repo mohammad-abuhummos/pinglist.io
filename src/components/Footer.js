@@ -15,6 +15,7 @@ export default function Footer() {
           <a href="/#pipeline">Pipeline</a>
           <Link to="/home-improvement">PingPost CRM</Link>
           <a href="/#industries">Industries</a>
+          <a href="/#faq">FAQ</a>
           <Link to="/terms">Terms</Link>
           <Link to="/privacy">Privacy</Link>
         </nav>

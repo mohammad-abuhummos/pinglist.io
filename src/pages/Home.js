@@ -14,6 +14,37 @@ const MARQUEE = [
   'Agencies',
 ];
 
+const FAQ = [
+  {
+    q: 'What is PingList.io?',
+    a: 'A CRM for the leads your business already has. Each one gets a record, an owner, and a stage, so the next step is visible to the team.',
+  },
+  {
+    q: 'Who is it for?',
+    a: 'Any team that follows up with people: real estate, services, clinics, agencies, and sales. The fields and stages are yours.',
+  },
+  {
+    q: 'Do you sell our leads to other companies?',
+    a: 'No. The lead stays with your business. Lead sellers who want to offer a lead to buyers use PingPost CRM, and it is posted only to the one that fits.',
+  },
+  {
+    q: 'How do leads get in?',
+    a: 'Website forms, phone, email, ads, referrals, webhooks, spreadsheets, and the API can land in the same pipeline.',
+  },
+  {
+    q: 'Can we use our own stages?',
+    a: 'Yes. Start with new, contacted, qualified, working, and won, or rename them to match how your team already talks.',
+  },
+  {
+    q: 'What if the owner is away?',
+    a: 'The lead stays on the shared list. Someone else on the team can see the notes and pick up the next step.',
+  },
+  {
+    q: 'How do we start?',
+    a: 'Tell us how leads come in today and where they get stuck. We reply from the team that runs PingList.io.',
+  },
+];
+
 const TEAM_POINTS = [
   {
     title: 'One record for every lead',
@@ -608,6 +639,21 @@ export default function Home() {
               <h3>{item.title}</h3>
               <p className="lede">{item.copy}</p>
             </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="faq">
+        <div className="section-head reveal">
+          <p className="kicker">FAQ</p>
+          <h2>Questions teams ask first.</h2>
+        </div>
+        <div className="faq">
+          {FAQ.map((item) => (
+            <details className="reveal" key={item.q}>
+              <summary>{item.q}</summary>
+              <p>{item.a}</p>
+            </details>
           ))}
         </div>
       </section>
