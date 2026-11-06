@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef, useState } from 'react';
 import { api } from '../api/client';
 import { gsap } from '../gsapSetup';
 import { CrmConnectDraw, CrmNetworkDraw, CrmPipeDraw, CrmRouting } from '../components/CrmDraws';
+import CrmDashboard from '../components/CrmDashboard';
 
 const MARQUEE = [
   'Real estate',
@@ -271,12 +272,11 @@ export default function Home() {
             />
             <figcaption className="media-caption">Leads Bank. Search, filter, and open any lead.</figcaption>
           </figure>
-          <figure className="media-frame reveal">
-            <img
-              src="/images/crm/dashboard.png"
-              alt="Today view with sold, unsold, amount, and duplicate totals"
-            />
-            <figcaption className="media-caption">Today. Sold, unsold, and what is still open.</figcaption>
+          <figure className="media-frame reveal dash-frame">
+            <CrmDashboard />
+            <figcaption className="media-caption">
+              Today. Pick a total, the ring, or yesterday to see the hours fill in.
+            </figcaption>
           </figure>
           <figure className="media-frame reveal">
             <img
@@ -608,10 +608,10 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <figure className="media-frame reveal">
+        <figure className="media-frame crm-shot reveal">
           <img
-            src="/images/crm-dashboard.jpg"
-            alt="CRM dashboard showing leads, stages, and owners"
+            src="/images/crm/dashboard.png"
+            alt="PingList today view with sold, unsold, amount, and duplicate totals"
           />
         </figure>
       </section>

@@ -547,7 +547,8 @@
   gap: 16px;
 }
 
-.crm-shots .media-frame img {
+.crm-shots .media-frame img,
+.media-frame.crm-shot img {
   display: block;
   width: 100%;
   height: auto;
@@ -2511,4 +2512,549 @@
 
 #connect .hi-draw {
   margin-top: 28px;
+}
+
+.dash-frame {
+  background: #f3f5f9;
+}
+
+.pdb {
+  display: grid;
+  grid-template-columns: 196px minmax(0, 1fr);
+  min-height: 760px;
+  background: #f3f5f9;
+  color: #1c2230;
+  font-family: var(--font-body);
+  font-size: 13px;
+  text-align: left;
+}
+
+.pdb button,
+.pdb input {
+  font: inherit;
+  color: inherit;
+}
+
+.pdb button {
+  cursor: pointer;
+}
+
+.pdb button:focus-visible,
+.pdb input:focus-visible {
+  outline: 2px solid #6a5cff;
+  outline-offset: 2px;
+}
+
+.pdb-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 10px;
+  background: #1a1d27;
+  color: #c8ccd8;
+}
+
+.pdb-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pdb-nav button,
+.pdb-dir-list button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 10px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  text-align: left;
+}
+
+.pdb-nav svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+
+.pdb-nav button.is-on {
+  background: #f4f6fb;
+  color: #1a1d27;
+  font-weight: 700;
+}
+
+.pdb-theme {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 12px;
+  background: #12141b;
+}
+
+.pdb-theme button {
+  border: 0;
+  border-radius: 9px;
+  padding: 7px 8px;
+  background: transparent;
+}
+
+.pdb-theme button.is-on {
+  background: #f4f6fb;
+  color: #1a1d27;
+  font-weight: 700;
+}
+
+.pdb-main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  padding: 14px;
+}
+
+.pdb-top {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pdb-account {
+  position: relative;
+}
+
+.pdb-account-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #e1e4ee;
+  border-radius: 999px;
+  padding: 4px 12px 4px 4px;
+  background: #fff;
+}
+
+.pdb-account-btn strong,
+.pdb-account-btn small {
+  display: block;
+  line-height: 1.15;
+}
+
+.pdb-account-btn small {
+  color: #7b8290;
+  font-size: 11px;
+}
+
+.pdb-avatar {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #3b6cff;
+  color: #fff;
+  font-weight: 700;
+}
+
+.pdb-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  padding: 6px;
+  border: 1px solid #e1e4ee;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(20, 24, 32, 0.12);
+}
+
+.pdb-menu button {
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: transparent;
+  text-align: left;
+}
+
+.pdb-menu button:hover,
+.pdb-nav button:hover,
+.pdb-legend button:hover,
+.pdb-group-list button:hover,
+.pdb-dir-list button:hover,
+.pdb-link-title:hover {
+  background: rgba(58, 74, 255, 0.06);
+}
+
+.pdb-card {
+  border: 1px solid #e6e8f0;
+  border-radius: 16px;
+  background: #fff;
+  padding: 14px 16px;
+}
+
+.pdb-card.is-dim {
+  opacity: 0.55;
+}
+
+.pdb-card h3,
+.pdb-today h3 {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.pdb-today p,
+.pdb-stat-label,
+.pdb-card-head h3,
+.pdb-accounts h3,
+.pdb-link-title {
+  margin: 0;
+  color: #8b919e;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pdb-today-row,
+.pdb-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+
+.pdb-card-head h3,
+.pdb-accounts h3 {
+  white-space: nowrap;
+}
+
+.pdb-today-row {
+  margin-top: 4px;
+}
+
+.pdb-days {
+  display: flex;
+  gap: 4px;
+  padding: 3px;
+  border-radius: 999px;
+  background: #f3f5f9;
+}
+
+.pdb-days button {
+  border: 0;
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: transparent;
+}
+
+.pdb-days button.is-on {
+  background: #fff;
+  font-weight: 700;
+  box-shadow: 0 1px 4px rgba(20, 24, 32, 0.08);
+}
+
+.pdb-stats,
+.pdb-links {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.pdb-links {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pdb-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  border: 1px solid #e6e8f0;
+  border-top: 3px solid var(--stat);
+  border-radius: 14px;
+  background: #fff;
+  text-align: left;
+}
+
+.pdb-stat.is-on,
+.pdb-links .pdb-card.is-on {
+  box-shadow: 0 0 0 2px var(--stat, #3b6cff);
+}
+
+.pdb-stat strong {
+  font-size: 1.55rem;
+  letter-spacing: -0.04em;
+}
+
+.pdb-split {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  color: #6d7482;
+  font-size: 12px;
+}
+
+.pdb-track {
+  height: 4px;
+  border-radius: 99px;
+  background: #eceff5;
+  overflow: hidden;
+}
+
+.pdb-track i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--stat);
+}
+
+.pdb-charts,
+.pdb-lower {
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr;
+  gap: 12px;
+}
+
+.pdb-legend,
+.pdb-legend-one {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.pdb-legend button,
+.pdb-legend-one,
+.pdb-group-list button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 0;
+  border-radius: 999px;
+  padding: 4px 8px;
+  background: transparent;
+  color: #5d6472;
+}
+
+.pdb-legend button.is-on,
+.pdb-legend-one.is-on,
+.pdb-group-list button.is-on,
+.pdb-dir-list button.is-on {
+  background: #eef1ff;
+  color: #1c2230;
+  font-weight: 700;
+}
+
+.pdb-legend i,
+.pdb-legend-one i,
+.pdb-group-list i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.pdb-chart {
+  display: block;
+  width: 100%;
+  height: 112px;
+  margin-top: 8px;
+}
+
+.pdb-empty,
+.pdb-tip,
+.pdb-detail {
+  margin: 8px 0 0;
+  color: #8b919e;
+  font-size: 12px;
+}
+
+.pdb-empty {
+  padding: 28px 0;
+}
+
+.pdb-tip {
+  min-height: 1.2em;
+}
+
+.pdb-accounts-body {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.pdb-donut {
+  width: 132px;
+  height: 132px;
+  flex: none;
+  color: #1c2230;
+}
+
+.pdb-donut path {
+  cursor: pointer;
+}
+
+.pdb-donut-value,
+.pdb-donut-label {
+  fill: currentColor;
+  font-family: var(--font-body);
+}
+
+.pdb-donut-value {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.pdb-donut-label {
+  font-size: 8px;
+  letter-spacing: 0.12em;
+}
+
+.pdb-group-list {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pdb-group-list button {
+  display: grid;
+  grid-template-columns: 8px 1fr auto auto;
+  width: 100%;
+  gap: 8px;
+}
+
+.pdb-link-title {
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.pdb-link-list,
+.pdb-dir-list {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pdb-link-list li,
+.pdb-dir-list button {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-top: 1px solid #eef0f5;
+}
+
+.pdb-link-list span,
+.pdb-dir-list span,
+.pdb-detail {
+  color: #6d7482;
+}
+
+.pdb-directory input {
+  width: min(220px, 46vw);
+  border: 1px solid #e1e4ee;
+  border-radius: 10px;
+  padding: 8px 10px;
+  background: #fff;
+}
+
+.pdb.is-dark {
+  background: #12141c;
+  color: #eef0f6;
+}
+
+.pdb.is-dark .pdb-card,
+.pdb.is-dark .pdb-stat,
+.pdb.is-dark .pdb-account-btn,
+.pdb.is-dark .pdb-menu,
+.pdb.is-dark .pdb-directory input {
+  background: #1c2030;
+  border-color: #31364a;
+  color: #eef0f6;
+}
+
+.pdb.is-dark .pdb-days {
+  background: #12141c;
+}
+
+.pdb.is-dark .pdb-days button.is-on,
+.pdb.is-dark .pdb-legend button.is-on,
+.pdb.is-dark .pdb-legend-one.is-on,
+.pdb.is-dark .pdb-group-list button.is-on,
+.pdb.is-dark .pdb-dir-list button.is-on {
+  background: #2a3148;
+  color: #fff;
+}
+
+.pdb.is-dark .pdb-today p,
+.pdb.is-dark .pdb-stat-label,
+.pdb.is-dark .pdb-card-head h3,
+.pdb.is-dark .pdb-accounts h3,
+.pdb.is-dark .pdb-link-title,
+.pdb.is-dark .pdb-empty,
+.pdb.is-dark .pdb-tip,
+.pdb.is-dark .pdb-split,
+.pdb.is-dark .pdb-account-btn small,
+.pdb.is-dark .pdb-legend button,
+.pdb.is-dark .pdb-legend-one,
+.pdb.is-dark .pdb-group-list button {
+  color: #a7adba;
+}
+
+.pdb.is-dark .pdb-donut,
+.pdb.is-dark .pdb-stat strong,
+.pdb.is-dark .pdb-today h3,
+.pdb.is-dark .pdb-card h3 {
+  color: #f4f6fb;
+}
+
+.pdb.is-dark .pdb-track {
+  background: #2a3144;
+}
+
+.pdb.is-dark .pdb-link-list li,
+.pdb.is-dark .pdb-dir-list button {
+  border-top-color: #31364a;
+}
+
+@media (max-width: 900px) {
+  .pdb {
+    grid-template-columns: 1fr;
+  }
+
+  .pdb-side {
+    gap: 10px;
+  }
+
+  .pdb-nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .pdb-nav button {
+    width: auto;
+    white-space: nowrap;
+  }
+
+  .pdb-theme {
+    width: 180px;
+  }
+
+  .pdb-stats,
+  .pdb-charts,
+  .pdb-lower,
+  .pdb-links {
+    grid-template-columns: 1fr;
+  }
 }
